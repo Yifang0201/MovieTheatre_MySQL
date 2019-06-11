@@ -1,0 +1,12 @@
+<table border="2">
+
+
+<td>Customer id</td><td> FirstName</td><td>LastName</td><td>EmailAddress</td><td>Sex</td>
+
+
+{% for user in personinfo %}
+ <tr>
+<span><td>{{ user.0 }}</td><td>{{ user.1 }}</td><td>{{ user.2 }}</td><td>{{ user.3 }}</td><td>{{ user.4 }}</td></span><br/>
+	</tr>
+{% endfor %}
+

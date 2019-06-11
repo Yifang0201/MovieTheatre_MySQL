@@ -1,0 +1,12 @@
+<h2> Showing List </h2>
+<table border="2">
+<td>Showing Date & Time</td><td>Showing ID</td><td>Movie ID</td><td>Room Number</td><td>Ticket Price</td>
+{% for user in users %}
+    <tr>
+     <span><td>{{ user.0 }}</td><td>{{ user.1 }} </td><td>{{ user.2 }}</td><td>{{user.3}}</td><td>{{user.4}}</td></span>
+  
+    </tr>
+{% endfor %}
+</table>
+<br>
+<a href="javascript:history.back()">Go Back</a>

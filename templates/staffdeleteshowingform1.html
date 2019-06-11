@@ -1,0 +1,13 @@
+
+ <h3>List of Customer ID needs to be deleted</h3>
+ <table border="2">
+<td>Customer ID</td>
+{% for user in users %}
+    <tr>
+     <span><td>{{ user.0 }}</td></span> 
+    </tr>
+{% endfor %}
+</table></form>
+
+<br>
+<a href="javascript:history.back()">Go Back</a>

@@ -1,0 +1,33 @@
+
+
+<form action="/submituserratemovie2" method="post">
+Your customer id is:  
+{% if idresult != "" %}
+<select name = "customidbox">
+  <option value ={{idresult}}>{{idresult}}</option>
+</select>
+{% endif %}
+<br>
+<br>
+
+please select the showing id and movie name to rate a movie <br>
+Showing: <select name = "showinginfo1">
+{% for a in showingmoviename1 %}
+  <option value =" {{a.0}} {{a.1}} " >{{a.0}} {{a.1}}</option>
+{% endfor %}
+</select>
+<br>
+
+rate star :
+<select name = "ratebox">
+  <option value =1 >1</option>
+  <option value =2 >2</option>
+  <option value =3 >3</option>
+  <option value =4 >4</option>
+  <option value =5 >5</option>
+
+</select>
+<br>
+
+ <input type="submit" value="Submit">
+</form>

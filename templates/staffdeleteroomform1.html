@@ -1,0 +1,16 @@
+{% for user in data %}
+    <span>{{ user.0 }}{{ user.1 }} {{ user.2 }}</span><br />
+{% endfor %}
+
+ 
+
+ <h3>List of showing ID needs to be deleted</h3>
+ <table border="2">
+<td>Showing ID</td>
+{% for user in showingid1 %}
+    <tr>
+     <span><td>{{ user.0 }}</td></span> 
+    </tr>
+{% endfor %}
+</table>
+

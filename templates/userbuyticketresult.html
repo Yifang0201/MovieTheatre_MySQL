@@ -1,0 +1,10 @@
+<table border="2">
+
+
+<td>Customer_id</td><td>Showing_id</td><td>Rating</td>
+
+{% for user in ticketresult%}
+ <tr>
+<span><td>{{ user.0 }}</td><td>{{ user.1 }}</td><td>{{ user.2 }}</td></span><br/>
+	</tr>
+{% endfor %}

@@ -1,0 +1,12 @@
+<h2> Movie Genre List </h2>
+<table border="2">
+<td>Movie Genre</td><td>Movie Name</td>
+{% for user in users %}
+    <tr>
+     <span><td>{{ user.0 }}</td><td>{{ user.1 }} </td></span>
+  
+    </tr>
+{% endfor %}
+</table>
+<br>
+<a href="javascript:history.back()">Go Back</a>

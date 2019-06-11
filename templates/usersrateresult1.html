@@ -1,0 +1,13 @@
+
+<table border="2">
+
+
+<td>Customer ID</td><td>Showing ID</td><td>Rating</td>
+
+
+{% for user in rateupdate%}
+ <tr>
+<span><td>{{ user.0 }}</td><td>{{ user.1 }}</td><td>{{ user.2 }}</td></span><br/>
+</tr>
+{% endfor %}
+

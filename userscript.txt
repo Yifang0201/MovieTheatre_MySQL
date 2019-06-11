@@ -1,0 +1,14 @@
+use MovieTheatre;
+
+create view AttendNumber as select Showing_idShowing, count(*) as Number_saled from Attend GROUP BY Showing_idShowing;
+
+create view ShowingCapacity as select idShowing,Capacity from Showing,TheatreRoom where RoomNumber = TheatreRoom_RoomNumber;
+
+CREATE view CapacityStatus as SELECT idShowing as Status_idShowing,Capacity as Status_Capacity,IFNULL(Number_saled,0) as Status_Number_saled FROM ShowingCapacity LEFT JOIN AttendNumber on Showing_idShowing = idShowing;
+
+
+CREATE view ShowingInfo as SELECT idMovie,MovieName,idShowing,ShowingDateTime,TheatreRoom_RoomNumber,TicketPrice,Genre,Status_Capacity,Status_Number_saled, Status_Capacity-Status_Number_saled AS SeatRemained from Movie,Showing,Genre,CapacityStatus where Movie.idMovie = Showing.Movie_idMovie and Genre.Movie_idMovie = Movie.idMovie and Status_idShowing = idShowing;
+
+CREATE view ShowingMovie as SELECT idShowing,MovieName from Showing,Movie where Movie_idMovie = idMovie;
+
+CREATE view AttendShowingInfo AS select * from Attend,ShowingMovie where idShowing = Showing_idShowing;

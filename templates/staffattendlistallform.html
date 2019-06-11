@@ -1,0 +1,11 @@
+<h2> List All </h2>
+<table border="2">
+<td>Customer ID</td><td>First Name</td><td>Last Name</td><td>Showing ID</td><td>Showing Date & Time</td><td>Movie Name</td><td>Rating</td>
+{% for user in users %}
+    <tr>
+     <span><td>{{ user.0 }}</td><td>{{ user.1 }} </td><td>{{ user.2 }}</td><td>{{ user.3 }} </td><td>{{ user.4 }}</td><td>{{ user.5 }} </td><td>{{ user.6 }}</td></span> 
+    </tr>
+{% endfor %}
+</table>
+<br>
+<a href="javascript:history.back()">Go Back</a>

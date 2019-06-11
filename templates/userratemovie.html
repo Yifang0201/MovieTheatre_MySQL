@@ -1,0 +1,9 @@
+<form action="/submituserratemovie1" method="post">
+Select Your name to rate a movie <br>
+<select name = "selectfirstname">
+{% for a in customername1 %}
+  <option value =" {{a.0}} {{a.1}} " >{{a.0}} {{a.1}}</option>
+{% endfor %}
+</select>
+ <input type="submit" value="Submit">
+</form>

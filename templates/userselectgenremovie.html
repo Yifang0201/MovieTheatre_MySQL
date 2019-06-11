@@ -1,0 +1,28 @@
+<form action="/submituserselectgenremovie" method="post">
+Select Genre Type<br>
+<select name = "selectgenre">
+{% for a in genretype %}
+  <option value ="{{a.0}}">{{a.0}}</option>
+{% endfor %}
+</select>
+<br><br>
+Select date<br>
+  	start date:<br>
+  	<input type="date" name="startDateBox" max="2015-12-31"><br>
+  	end date:<br>
+  	<input type="date" name="endDateBox" min="2016-05-01"><br>
+	<br>
+ 	<input type="checkbox" name="isSeatBox">Still have seat<br>
+
+ 	<br>
+ 	Input the Movie Name:<br>(If you input the movie name,<br> only movie name will be searched,<br>the function above will not work)<br>
+ 	<input type="text" name="movieNameBox"><br>
+
+	<br>
+ 	<input type="submit" value="Submit">
+
+</form>
+
+
+
+

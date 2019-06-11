@@ -1,0 +1,10 @@
+<form action="/submituserreviewshowing" method="post">
+Select Your name to see your watch history<br>
+<select name = "selectfirstname">
+{% for a in customername1 %}
+  <option value =" {{a.0}} {{a.1}} " >{{a.0}} {{a.1}}</option>
+{% endfor %}
+</select>
+
+ <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,11 @@
+<h2> Attend Customer List </h2>
+<table border="2">
+<td>First Name</td><td>Last Name</td><td>Customer ID</td><td>Showing ID</td><td>Rating</td>
+{% for user in users %}
+    <tr>
+     <span><td>{{ user.0 }}</td><td>{{ user.1 }} </td><td>{{ user.2 }}</td><td>{{ user.3 }} </td><td>{{ user.4 }}</td></span> 
+    </tr>
+{% endfor %}
+</table>
+<br>
+<a href="javascript:history.back()">Go Back</a>

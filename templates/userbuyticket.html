@@ -1,0 +1,14 @@
+<form action="/submituserselectname" method="post">
+Select Your name to buy a ticket <br>
+<select name = "selectfirstname">
+{% for a in customername1 %}
+  <option value =" {{a.0}} {{a.1}} " >{{a.0}} {{a.1}}</option>
+{% endfor %}
+</select>
+<select name = "selectshowingid">
+{% for a in showingid1 %}
+  <option value =" {{a.0}} " >{{a.0}}</option>
+{% endfor %}
+</select>
+ <input type="submit" value="Submit">
+</form>

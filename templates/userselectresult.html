@@ -1,0 +1,16 @@
+
+
+<table border="2">
+
+
+<td>Movie ID</td><td>Movie Name</td><td>Showing ID</td><td>Showing Date&Time</td><td>Room Number</td><td>Ticket Price</td><td>Genre</td><td>Room Capacity</td><td>Number saled </td>
+<td>Seat Remained</td><td>No Seating</td>
+
+
+{% for user in queryresult%}
+ <tr>
+<span><td>{{ user.0 }}</td><td>{{ user.1 }}</td><td>{{ user.2 }}</td><td>{{ user.3 }}</td><td>{{ user.4 }}</td><td>{{ user.5 }}</td><td>{{ user.6 }}</td><td>{{ user.7 }}</td><td>{{ user.8 }}</td><td>{{ user.9 }}</td><td>{% if user.9 == 0 %}<font color="red">NO SEAT</font>{%else%}<font color="black">has seat</font>{% endif %}</td></span><br/>
+	</tr>
+{% endfor %}
+
+
